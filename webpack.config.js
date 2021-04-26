@@ -14,6 +14,8 @@ module.exports = {
         open: true,
         host: 'localhost',
         hot: true,
+        // change this to something else if a shell exists
+        port: 3000, 
     },
     module: {
         rules: [
@@ -40,27 +42,27 @@ module.exports = {
         ],
     },
     plugins: [
-        // new ModuleFederationPlugin({
-        //     name: 'App',
-        //     filename: 'remoteEntry.js',
-        //     remotes: {
+        new ModuleFederationPlugin({
+            name: 'App',
+            filename: 'remoteEntry.js',
+            // remotes: {
 
-        //     },
-        //     exposes: {
+            // },
+            // exposes: {
                 
-        //     },
-        //     shared: {
-        //         ...deps,
-        //         react: {
-        //             singleton: true,
-        //             requiredVersion: deps.react,
-        //         },
-        //         'react-dom': {
-        //             singleton: true,
-        //             requiredVersion: deps["react-dom"],
-        //         }
-        //     }
-        // }),
+            // },
+            // shared: {
+            //     ...deps,
+            //     react: {
+            //         singleton: true,
+            //         requiredVersion: deps.react,
+            //     },
+            //     'react-dom': {
+            //         singleton: true,
+            //         requiredVersion: deps["react-dom"],
+            //     }
+            // }
+        }),
         new HtmlWebpackPlugin({
             template: './src/index.html',
         }),
