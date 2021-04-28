@@ -1,13 +1,8 @@
-import { useState } from 'react';
-
 const App: React.FC = () => {
-  const name = 'vick';
-  const [age, setAge] = useState(null);
+  const text = 'world!';
   return (
     <>
-      <h1>{`Hello ${name}!`}</h1>
-      <p>{age}</p>
-      <button type="button" onClick={() => setAge(32)}>inc</button>
+      <h1>{`Hello ${text}`}</h1>
     </>
   );
 };
