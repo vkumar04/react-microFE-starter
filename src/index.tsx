@@ -1,9 +1,11 @@
-import React from 'react'
-import {render} from 'react-dom'
+import React from 'react';
+import { render } from 'react-dom';
 
-import App from './components/App'
+import App from './components/App';
 
-render(<React.StrictMode>
+render(
+  <React.StrictMode>
     <App />
-  </React.StrictMode>, 
-  document.getElementById('root'))
+  </React.StrictMode>,
+  document.getElementById('root'),
+);
