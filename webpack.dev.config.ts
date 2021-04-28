@@ -1,10 +1,10 @@
 import path from "path";
 import webpack from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+// import ModuleFederationPlugin from "webpack/lib/container/ModuleFederationPlugin";
+// import {dependencies as deps} from './package.json'
 import { Configuration as WebpackConfiguration } from "webpack";
 import { Configuration as WebpackDevServerConfiguration } from "webpack-dev-server";
-
-// works but should be unnecessary
 interface Configuration extends WebpackConfiguration {
   devServer?: WebpackDevServerConfiguration;
 }
@@ -37,6 +37,27 @@ const config: Configuration = {
     extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
+    // new ModuleFederationPlugin({
+    //   name: "Root",
+    //   filename: "remoteEntry.js",
+    //   remotes: {
+        
+    //   },
+    //   exposes: {
+        
+    //   },
+    //   shared: {
+    //     ...deps,
+    //     react: {
+    //       singleton: true,
+    //       requiredVersion: deps.react,
+    //     },
+    //     "react-dom": {
+    //       singleton: true,
+    //       requiredVersion: deps["react-dom"],
+    //     },
+    //   },
+    // }),
     new HtmlWebpackPlugin({
       template: "src/index.html",
     }),
