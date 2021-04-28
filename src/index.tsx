@@ -3,6 +3,7 @@ import {render} from 'react-dom'
 
 import App from './components/App'
 
-render(<App/>, document.getElementById('root'))
-
-module.hot.accept();
+render(<React.StrictMode>
+    <App />
+  </React.StrictMode>, 
+  document.getElementById('root'))
