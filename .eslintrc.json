@@ -12,7 +12,8 @@
 	"extends": [
 		"plugin:react/recommended",
 		"plugin:@typescript-eslint/recommended",
-		"airbnb-typescript"
+		"airbnb-typescript",
+		"prettier"
 	],
 	"rules": {
 		"react-hooks/rules-of-hooks": "error",
