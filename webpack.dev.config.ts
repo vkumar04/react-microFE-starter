@@ -33,7 +33,7 @@ const config: Configuration = {
                 },
             },
             {
-                test: /\.(png|jpg|gif)$/i,
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
             },
         ],
